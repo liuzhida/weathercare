@@ -38,4 +38,4 @@ if "storm" in weather:
 string = string + u"注意天气，关心亲人"
 phone = 18626891201
 print string
-#urllib2.urlopen(url = "http://cf.lmobile.cn/submitdata/service.asmx/g_Submit?sname=dlzhuoyc&spwd=bkuCMRZ8&scorpid=&sprdid=1012818&sdst=%s&smsg=%s"%(phone,string), )
+#urllib2.urlopen(url = "http://sms.com"%(phone,string), )
