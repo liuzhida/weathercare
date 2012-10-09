@@ -49,6 +49,5 @@ print string
 #        phone = i.split(':')[1]
 #        sms = r.get(i)
 #        sms = sms.replace("{weather}",string)
-#        urllib2.urlopen(url = "http://cf.lmobile.cn/submitdata/service.asmx/g_Submit?sname=dlzhuoyc&spwd=bkuCMRZ8&scorpid=&sprdid=1012818&sdst=%s&smsg=%s"%(phone,sms), )
 #else:
 #    exit 
