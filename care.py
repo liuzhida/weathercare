@@ -23,23 +23,34 @@ wind = wind1 -wind2
 string = "明天"
 flag = 0
 if temp >= 3:
-    string = string + "降温%s度，添件衣服吧"%temp
     flag = 1
-if wind1 > 5 and wind <= -3:
-    string = string + "风力%s级，添件衣服吧"%wind2
+    elif "rain" in weather:
+        string = string + "有雨要降温，记得添衣服带伞哦"
+    elif "snow" in weather:
+        string = string + "有雪要降温，记得添衣服带伞哦"
+    elif "storm" in weather:
+        string = string + "有暴风雨要降温，记得添衣服带伞哦"
+    elif "shower" in weather:
+        string = string + "有小雨要降温，记得添衣服带伞哦"
+    else:
+        string = string + "降温%s度，添件衣服吧"%temp
+elif wind1 > 5 and wind <= -3:
+    string = string + "风大，添件衣服吧"
     flag = 1
-if "rain" in weather:
+elif "rain" in weather:
     string = string + "有雨，记得带伞哦"
     flag = 1
-if "snow" in weather:
+elif "snow" in weather:
     string = string + "有雪，记得带伞哦"
     flag = 1
-if "storm" in weather:
+elif "storm" in weather:
     string = string + "有暴风雨，记得带伞哦"
     flag = 1
-if "shower" in weather:
+elif "shower" in weather:
     string = string + "局部地区有小雨，记得带伞哦"
     flag = 1
+else:
+    flag = 0
 
 print string
 #r=redis.Redis(host='127.0.0.1',port=6379,db=0)
